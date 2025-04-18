@@ -1,0 +1,6 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: Output 目录未以斜杠结尾。  此生成实例将添加斜杠，因为必须有这个斜杠才能正确计算 Output 目录。
+  Application.cpp
+C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\Application.cpp(189,27): warning C4244: “初始化”: 从“double”转换到“GLfloat”，可能丢失数据
+  VertexBuffer.cpp
+  正在生成代码...
+LINK : fatal error LNK1104: 无法打开文件“.\Debug\helloOpenGL.exe”

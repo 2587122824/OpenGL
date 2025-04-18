@@ -1,0 +1,16 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: Output 目录未以斜杠结尾。  此生成实例将添加斜杠，因为必须有这个斜杠才能正确计算 Output 目录。
+  Application.cpp
+C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\Application.cpp(67,17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\Application.cpp(68,17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\Application.cpp(73,19): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\Application.cpp(74,19): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\Application.cpp(77,13): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\Application.cpp(78,13): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\Application.cpp(85,32): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\Application.cpp(91,28): warning C4305: “初始化”: 从“double”到“float”截断
+C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\Application.cpp(342,27): warning C4244: “初始化”: 从“double”转换到“GLfloat”，可能丢失数据
+C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\Application.cpp(370,28): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+LINK : warning LNK4098: 默认库“LIBCMT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+LINK : warning LNK4098: 默认库“MSVCRT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+glew32s.lib(glew.obj) : warning LNK4099: 未找到 PDB“”(使用“glew32s.lib(glew.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
+  helloOpenGL.vcxproj -> C:\dev\OpenGL\helloOpenGL\helloOpenGL\Debug\helloOpenGL.exe
