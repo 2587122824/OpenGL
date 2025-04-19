@@ -5,6 +5,7 @@ class IndexBuffer {
 private:
 	GLuint id;
 public:
+	IndexBuffer();
 	IndexBuffer(const void* verteices, unsigned int size);
 	~IndexBuffer();
 

@@ -15,6 +15,8 @@
 #include "vender/imgui/imgui.h"
 #include "vender/imgui/imgui_impl_glfw.h"
 #include "vender/imgui/imgui_impl_opengl3.h"
+#include "vender/imgui/imgui_impl_opengl3.h"
+#include "model.h"
 //灯光默认位置
 glm::vec3 lightPos(-1.0f, 0.9f, -0.5f);
 //摄像机对象
@@ -93,87 +95,13 @@ int main() {
     glfwSetKeyCallback(window, key_callback);
     glfwSetCursorPosCallback(window, mouse_callback);
     glfwSetScrollCallback(window, scroll_callback);
-    GLfloat vertices[] = {
-        //位置              //颜色            //纹理坐标
-        -0.5f, -0.5f, -0.5f,1.0f,0.0f, 0.0f , 0.0f, 0.0f,//左下角
-         0.5f, -0.5f, -0.5f,1.0f,0.0f, 0.0f , 1.0f, 0.0f,//右下角
-         0.5f,  0.5f, -0.5f,1.0f,0.0f, 0.0f , 1.0f, 1.0f,//右上角
-         0.5f,  0.5f, -0.5f,1.0f,0.0f, 0.0f , 1.0f, 1.0f,//右上角
-        -0.5f,  0.5f, -0.5f,1.0f,0.0f, 0.0f , 0.0f, 1.0f,//左上角
-        -0.5f, -0.5f, -0.5f,1.0f,0.0f, 0.0f , 0.0f, 0.0f,//左下角
-                          
-        -0.5f, -0.5f,  0.5f,1.0f,0.0f, 0.0f , 0.0f, 0.0f,
-         0.5f, -0.5f,  0.5f,1.0f,0.0f, 0.0f , 1.0f, 0.0f,
-         0.5f,  0.5f,  0.5f,1.0f,0.0f, 0.0f , 1.0f, 1.0f,
-         0.5f,  0.5f,  0.5f,1.0f,0.0f, 0.0f , 1.0f, 1.0f,
-        -0.5f,  0.5f,  0.5f,1.0f,0.0f, 0.0f , 0.0f, 1.0f,
-        -0.5f, -0.5f,  0.5f,1.0f,0.0f, 0.0f , 0.0f, 0.0f,
-                        
-        -0.5f,  0.5f,  0.5f,1.0f,0.0f, 0.0f , 1.0f, 0.0f,
-        -0.5f,  0.5f, -0.5f,1.0f,0.0f, 0.0f , 1.0f, 1.0f,
-        -0.5f, -0.5f, -0.5f,1.0f,0.0f, 0.0f , 0.0f, 1.0f,
-        -0.5f, -0.5f, -0.5f,1.0f,0.0f, 0.0f , 0.0f, 1.0f,
-        -0.5f, -0.5f,  0.5f,1.0f,0.0f, 0.0f , 0.0f, 0.0f,
-        -0.5f,  0.5f,  0.5f,1.0f,0.0f, 0.0f , 1.0f, 0.0f,
-                       
-         0.5f,  0.5f,  0.5f,1.0f,0.0f, 0.0f , 1.0f, 0.0f,
-         0.5f,  0.5f, -0.5f,1.0f,0.0f, 0.0f , 1.0f, 1.0f,
-         0.5f, -0.5f, -0.5f,1.0f,0.0f, 0.0f , 0.0f, 1.0f,
-         0.5f, -0.5f, -0.5f,1.0f,0.0f, 0.0f , 0.0f, 1.0f,
-         0.5f, -0.5f,  0.5f,1.0f,0.0f, 0.0f , 0.0f, 0.0f,
-         0.5f,  0.5f,  0.5f,1.0f,0.0f, 0.0f , 1.0f, 0.0f,
-                        
-        -0.5f, -0.5f, -0.5f,1.0f,0.0f, 0.0f , 0.0f, 1.0f,
-         0.5f, -0.5f, -0.5f,1.0f,0.0f, 0.0f , 1.0f, 1.0f,
-         0.5f, -0.5f,  0.5f,1.0f,0.0f, 0.0f , 1.0f, 0.0f,
-         0.5f, -0.5f,  0.5f,1.0f,0.0f, 0.0f , 1.0f, 0.0f,
-        -0.5f, -0.5f,  0.5f,1.0f,0.0f, 0.0f , 0.0f, 0.0f,
-        -0.5f, -0.5f, -0.5f,1.0f,0.0f, 0.0f , 0.0f, 1.0f,
-                        
-        -0.5f,  0.5f, -0.5f,1.0f,0.0f, 0.0f , 0.0f, 1.0f,
-         0.5f,  0.5f, -0.5f,1.0f,0.0f, 0.0f , 1.0f, 1.0f,
-         0.5f,  0.5f,  0.5f,1.0f,0.0f, 0.0f , 1.0f, 0.0f,
-         0.5f,  0.5f,  0.5f,1.0f,0.0f, 0.0f , 1.0f, 0.0f,
-        -0.5f,  0.5f,  0.5f,1.0f,0.0f, 0.0f , 0.0f, 0.0f,
-        -0.5f,  0.5f, -0.5f,1.0f,0.0f, 0.0f , 0.0f, 1.0f
-    };
-    GLfloat lightVertices[] = {
-        //位置              //颜色        
-        0.05f, 0.996f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f,
-        0.01f, 0.927f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f,
-        0.09f, 0.927f, 0.0f, 1.0f, 0.0f, 0.0f, 1.0f,
-
-        // 面2：侧面1（绿色）
-        0.05f, 0.996f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f,
-        0.01f, 0.927f, 0.0f, 0.0f, 1.0f, 0.0f, 1.0f,
-        0.05f, 0.95f, 0.06546f, 0.0f, 1.0f, 0.0f, 1.0f,
-
-        // 面3：侧面2（蓝色）
-        0.05f, 0.996f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f,
-        0.09f, 0.927f, 0.0f, 0.0f, 0.0f, 1.0f, 1.0f,
-        0.05f, 0.95f, 0.06546f, 0.0f, 0.0f, 1.0f, 1.0f,
-
-        // 面4：侧面3（黄色）
-        0.01f, 0.927f, 0.0f, 1.0f, 1.0f, 0.0f, 1.0f,
-        0.09f, 0.927f, 0.0f, 1.0f, 1.0f, 0.0f, 1.0f,
-        0.05f, 0.95f, 0.06546f, 1.0f, 1.0f, 0.0f, 1.0f,
-    };
+ 
+    
+   
 
     //纹理对象
     Texture texture1("src/assest/img/wall.jpg", 0);
     Texture texture2("src/assest/img/jb.jpg",1);
-  
-    //灯
-    //vertexArrayObject 顶点数组对象
-    VertexArray VAO2;
-    //vertexBufferObject 顶点缓存对象
-    VertexBuffer VBO2(lightVertices, sizeof(lightVertices));
-    //VBO布局
-    VertexBufferLayout VBL2;
-    VBL2.addAttribute(3);
-    VBL2.addAttribute(4);
-    VAO2.addBuffer(VBO2, VBL2);
-
 
     //着色器
     Shader shader("res/shaders/basic.shader");
@@ -226,18 +154,7 @@ int main() {
     lightShader.setUniformMatrix4fv("view", view);
     //投影矩阵
     lightShader.setUniformMatrix4fv("projection", projection);
-    ////摄像机
-    //glm::vec3 cameraPos = glm::vec3(0.0f, 0.0f, 3.0f);
-    //glm::vec3 cameraTarget = glm::vec3(0.0f, 0.0f, 0.0f);
-    //glm::vec3 cameraDirection = glm::normalize(cameraPos - cameraTarget);
-    //glm::vec3 up = glm::vec3(0.0f, 1.0f, 0.0f);//上向量
-    //glm::vec3 cameraRight = glm::normalize(glm::cross(up, cameraDirection));//右轴
-    //glm::vec3 cameraUp = glm::cross(cameraDirection, cameraRight);//上轴
-    //glm::mat4 camera;
-    ////glm::LookAt函数需要一个位置、目标和上向量
-    //camera = glm::lookAt(glm::vec3(0.0f, 0.0f, 3.0f),
-    //    glm::vec3(0.0f, 0.0f, 0.0f),
-    //    glm::vec3(0.0f, 1.0f, 0.0f));
+ 
     //开启深度测试
     glEnable(GL_DEPTH_TEST);
 
@@ -317,7 +234,6 @@ int main() {
         glViewport(0, 0, display_w, display_h);
         //ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
-
         //函数检查有没有触发什么事件（比如键盘输入、鼠标移动等），然后调用对应的回调函数（可以通过回调方法手动设置）
         glfwPollEvents();
         //渲染命令
@@ -328,23 +244,14 @@ int main() {
          //随时间旋转
         model = glm::rotate(model, ((float)deltaTime * 1) * glm::radians(50.0f), glm::vec3(0.5f, 1.0f, 1.0f));
         shader.setUniformMatrix4fv("model", model);
-        //摄像机围绕原点旋转
-        /*float radius = 10.0f;
-        float camX = sin(glfwGetTime()) * radius;
-        float camY = sin(glfwGetTime()) * radius;
-        float camZ = cos(glfwGetTime()) * radius;
-        glm::mat4 view;
-        view = glm::lookAt(glm::vec3(camX, camY, camZ), glm::vec3(0.0, 0.0, 0.0), glm::vec3(0.0, 1.0, 0.0));*/
         view = camera1.GetViewMatrix();
         shader.setUniformMatrix4fv("view", view);
         projection = glm::perspective(glm::radians(camera1.Zoom), 800.0f / 600.0f, 0.1f, 100.0f);
         shader.setUniformMatrix4fv("projection", projection);
-        VAO.bind();
         glDrawArrays(GL_TRIANGLES, 0, 36);
         lightShader.use();
         lightShader.setUniformMatrix4fv("view", view);
         lightShader.setUniformMatrix4fv("projection", projection);
-        VAO2.bind();
         glDrawArrays(GL_TRIANGLES, 0, 12);
         //glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
         //交换缓冲

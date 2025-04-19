@@ -1698,9 +1698,13 @@
     <ClInclude Include="src\mesh.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\model.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Library Include="Dependencies\GLEW\lib\Release\Win32\glew32.lib" />
+    <Library Include="Dependencies\Assimp\lib\assimp-vc143-mtd.lib" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="src\assest\img\metal.bmp">

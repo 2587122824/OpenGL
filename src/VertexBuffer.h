@@ -5,6 +5,7 @@ class VertexBuffer {
 private:
 	GLuint id;
 public:
+	VertexBuffer();
 	VertexBuffer(const void* verteices, unsigned int size);
 	~VertexBuffer();
 
