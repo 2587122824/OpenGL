@@ -10,10 +10,8 @@
 #include "VertexBufferLayout.h"
 #include "IndexBuffer.h"
 #include "VertexArray.h"
-#include "Texture.h"
 #include <string>
 #include <vector>
-using namespace std;
 
 #define MAX_BONE_INFLUENCE 4
 //顶点
@@ -36,20 +34,20 @@ struct Vertex {
 
 struct Texture {
     unsigned int id;
-    string type;
-    string path;
+    std::string type;
+    std::string path;
 };
 
 class Mesh {
 public:
     // mesh Data
-    vector<Vertex>       vertices;
-    vector<unsigned int> indices;
-    vector<Texture>      textures;
+    std::vector<Vertex>       vertices;
+    std::vector<unsigned int> indices;
+    std::vector<Texture>      textures;
     VertexArray VAO;
 
     // 构造函数
-    Mesh(vector<Vertex> vertices, vector<unsigned int> indices, vector<Texture> textures)
+    Mesh(std::vector<Vertex> vertices, std::vector<unsigned int> indices, std::vector<Texture> textures)
     {
         this->vertices = vertices;
         this->indices = indices;
@@ -71,16 +69,16 @@ public:
         {
             glActiveTexture(GL_TEXTURE0 + i); // active proper texture unit before binding
             // retrieve texture number (the N in diffuse_textureN)
-            string number;
-            string name = textures[i].type;
+            std::string number;
+            std::string name = textures[i].type;
             if (name == "texture_diffuse")
                 number = std::to_string(diffuseNr++);
             else if (name == "texture_specular")
-                number = std::to_string(specularNr++); // transfer unsigned int to string
+                number = std::to_string(specularNr++); // transfer unsigned int to std::string
             else if (name == "texture_normal")
-                number = std::to_string(normalNr++); // transfer unsigned int to string
+                number = std::to_string(normalNr++); // transfer unsigned int to std::string
             else if (name == "texture_height")
-                number = std::to_string(heightNr++); // transfer unsigned int to string
+                number = std::to_string(heightNr++); // transfer unsigned int to std::string
 
             // now set the sampler to the correct texture unit
             glUniform1i(glGetUniformLocation(shader.id, (name + number).c_str()), i);

@@ -1,6 +1,83 @@
 ﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: Output 目录未以斜杠结尾。  此生成实例将添加斜杠，因为必须有这个斜杠才能正确计算 Output 目录。
-  Application.cpp
-C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\Application.cpp(189,27): warning C4244: “初始化”: 从“double”转换到“GLfloat”，可能丢失数据
-  VertexBuffer.cpp
-  正在生成代码...
-LINK : fatal error LNK1104: 无法打开文件“.\Debug\helloOpenGL.exe”
+Application.obj : error LNK2019: 无法解析的外部符号 glewInit，函数 "struct GLFWwindow * __cdecl createWindow(void)" (?createWindow@@YAPEAUGLFWwindow@@XZ) 中引用了该符号
+Application.obj : error LNK2019: 无法解析的外部符号 glfwInit，函数 "struct GLFWwindow * __cdecl createWindow(void)" (?createWindow@@YAPEAUGLFWwindow@@XZ) 中引用了该符号
+Application.obj : error LNK2019: 无法解析的外部符号 glfwTerminate，函数 "struct GLFWwindow * __cdecl createWindow(void)" (?createWindow@@YAPEAUGLFWwindow@@XZ) 中引用了该符号
+Application.obj : error LNK2019: 无法解析的外部符号 glfwWindowHint，函数 "struct GLFWwindow * __cdecl createWindow(void)" (?createWindow@@YAPEAUGLFWwindow@@XZ) 中引用了该符号
+Application.obj : error LNK2019: 无法解析的外部符号 glfwCreateWindow，函数 "struct GLFWwindow * __cdecl createWindow(void)" (?createWindow@@YAPEAUGLFWwindow@@XZ) 中引用了该符号
+Application.obj : error LNK2019: 无法解析的外部符号 glfwWindowShouldClose，函数 main 中引用了该符号
+Application.obj : error LNK2019: 无法解析的外部符号 glfwSetWindowShouldClose，函数 "void __cdecl key_callback(struct GLFWwindow *,int,int,int,int)" (?key_callback@@YAXPEAUGLFWwindow@@HHHH@Z) 中引用了该符号
+Application.obj : error LNK2019: 无法解析的外部符号 glfwGetFramebufferSize，函数 "struct GLFWwindow * __cdecl createWindow(void)" (?createWindow@@YAPEAUGLFWwindow@@XZ) 中引用了该符号
+imgui_impl_glfw.obj : error LNK2001: 无法解析的外部符号 glfwGetFramebufferSize
+Application.obj : error LNK2019: 无法解析的外部符号 glfwPollEvents，函数 main 中引用了该符号
+Application.obj : error LNK2019: 无法解析的外部符号 glfwGetKey，函数 "void __cdecl key_callback(struct GLFWwindow *,int,int,int,int)" (?key_callback@@YAXPEAUGLFWwindow@@HHHH@Z) 中引用了该符号
+imgui_impl_glfw.obj : error LNK2001: 无法解析的外部符号 glfwGetKey
+Application.obj : error LNK2019: 无法解析的外部符号 glfwSetKeyCallback，函数 main 中引用了该符号
+imgui_impl_glfw.obj : error LNK2001: 无法解析的外部符号 glfwSetKeyCallback
+Application.obj : error LNK2019: 无法解析的外部符号 glfwSetCursorPosCallback，函数 main 中引用了该符号
+imgui_impl_glfw.obj : error LNK2001: 无法解析的外部符号 glfwSetCursorPosCallback
+Application.obj : error LNK2019: 无法解析的外部符号 glfwSetScrollCallback，函数 main 中引用了该符号
+imgui_impl_glfw.obj : error LNK2001: 无法解析的外部符号 glfwSetScrollCallback
+Application.obj : error LNK2019: 无法解析的外部符号 glfwGetTime，函数 main 中引用了该符号
+imgui_impl_glfw.obj : error LNK2001: 无法解析的外部符号 glfwGetTime
+Application.obj : error LNK2019: 无法解析的外部符号 glfwMakeContextCurrent，函数 "struct GLFWwindow * __cdecl createWindow(void)" (?createWindow@@YAPEAUGLFWwindow@@XZ) 中引用了该符号
+Application.obj : error LNK2019: 无法解析的外部符号 glfwSwapBuffers，函数 main 中引用了该符号
+Application.obj : error LNK2019: 无法解析的外部符号 "public: __cdecl VertexBuffer::VertexBuffer(void)" (??0VertexBuffer@@QEAA@XZ)，函数 "public: __cdecl Mesh::Mesh(class std::vector<struct Vertex,class std::allocator<struct Vertex> >,class std::vector<unsigned int,class std::allocator<unsigned int> >,class std::vector<struct Texture,class std::allocator<struct Texture> >)" (??0Mesh@@QEAA@V?$vector@UVertex@@V?$allocator@UVertex@@@std@@@std@@V?$vector@IV?$allocator@I@std@@@2@V?$vector@UTexture@@V?$allocator@UTexture@@@std@@@2@@Z) 中引用了该符号
+Application.obj : error LNK2019: 无法解析的外部符号 "public: __cdecl IndexBuffer::IndexBuffer(void)" (??0IndexBuffer@@QEAA@XZ)，函数 "public: __cdecl Mesh::Mesh(class std::vector<struct Vertex,class std::allocator<struct Vertex> >,class std::vector<unsigned int,class std::allocator<unsigned int> >,class std::vector<struct Texture,class std::allocator<struct Texture> >)" (??0Mesh@@QEAA@V?$vector@UVertex@@V?$allocator@UVertex@@@std@@@std@@V?$vector@IV?$allocator@I@std@@@2@V?$vector@UTexture@@V?$allocator@UTexture@@@std@@@2@@Z) 中引用了该符号
+Application.obj : error LNK2001: 无法解析的外部符号 __glewGenerateMipmap
+Application.obj : error LNK2001: 无法解析的外部符号 glewExperimental
+IndexBuffer.obj : error LNK2001: 无法解析的外部符号 __glewBindBuffer
+VertexBuffer.obj : error LNK2001: 无法解析的外部符号 __glewBindBuffer
+IndexBuffer.obj : error LNK2001: 无法解析的外部符号 __glewBufferData
+VertexBuffer.obj : error LNK2001: 无法解析的外部符号 __glewBufferData
+IndexBuffer.obj : error LNK2001: 无法解析的外部符号 __glewDeleteBuffers
+VertexBuffer.obj : error LNK2001: 无法解析的外部符号 __glewDeleteBuffers
+IndexBuffer.obj : error LNK2001: 无法解析的外部符号 __glewGenBuffers
+VertexBuffer.obj : error LNK2001: 无法解析的外部符号 __glewGenBuffers
+shader.obj : error LNK2001: 无法解析的外部符号 __glewAttachShader
+shader.obj : error LNK2001: 无法解析的外部符号 __glewCompileShader
+shader.obj : error LNK2001: 无法解析的外部符号 __glewCreateProgram
+shader.obj : error LNK2001: 无法解析的外部符号 __glewCreateShader
+shader.obj : error LNK2001: 无法解析的外部符号 __glewDeleteProgram
+shader.obj : error LNK2001: 无法解析的外部符号 __glewDeleteShader
+shader.obj : error LNK2001: 无法解析的外部符号 __glewGetProgramInfoLog
+shader.obj : error LNK2001: 无法解析的外部符号 __glewGetProgramiv
+shader.obj : error LNK2001: 无法解析的外部符号 __glewGetShaderInfoLog
+shader.obj : error LNK2001: 无法解析的外部符号 __glewGetShaderiv
+shader.obj : error LNK2001: 无法解析的外部符号 __glewGetUniformLocation
+shader.obj : error LNK2001: 无法解析的外部符号 __glewLinkProgram
+shader.obj : error LNK2001: 无法解析的外部符号 __glewShaderSource
+shader.obj : error LNK2001: 无法解析的外部符号 __glewUniform1i
+shader.obj : error LNK2001: 无法解析的外部符号 __glewUniform4f
+shader.obj : error LNK2001: 无法解析的外部符号 __glewUniformMatrix4fv
+shader.obj : error LNK2001: 无法解析的外部符号 __glewUseProgram
+imgui_impl_glfw.obj : error LNK2019: 无法解析的外部符号 glfwGetError，函数 "bool __cdecl ImGui_ImplGlfw_Init(struct GLFWwindow *,bool,enum GlfwClientApi)" (?ImGui_ImplGlfw_Init@@YA_NPEAUGLFWwindow@@_NW4GlfwClientApi@@@Z) 中引用了该符号
+imgui_impl_glfw.obj : error LNK2019: 无法解析的外部符号 glfwSetErrorCallback，函数 "bool __cdecl ImGui_ImplGlfw_Init(struct GLFWwindow *,bool,enum GlfwClientApi)" (?ImGui_ImplGlfw_Init@@YA_NPEAUGLFWwindow@@_NW4GlfwClientApi@@@Z) 中引用了该符号
+imgui_impl_glfw.obj : error LNK2019: 无法解析的外部符号 glfwSetMonitorCallback，函数 "void __cdecl ImGui_ImplGlfw_InstallCallbacks(struct GLFWwindow *)" (?ImGui_ImplGlfw_InstallCallbacks@@YAXPEAUGLFWwindow@@@Z) 中引用了该符号
+imgui_impl_glfw.obj : error LNK2019: 无法解析的外部符号 glfwGetWindowSize，函数 "void __cdecl ImGui_ImplGlfw_NewFrame(void)" (?ImGui_ImplGlfw_NewFrame@@YAXXZ) 中引用了该符号
+imgui_impl_glfw.obj : error LNK2019: 无法解析的外部符号 glfwGetWindowAttrib，函数 "void __cdecl ImGui_ImplGlfw_UpdateMouseData(void)" (?ImGui_ImplGlfw_UpdateMouseData@@YAXXZ) 中引用了该符号
+imgui_impl_glfw.obj : error LNK2019: 无法解析的外部符号 glfwSetWindowFocusCallback，函数 "void __cdecl ImGui_ImplGlfw_InstallCallbacks(struct GLFWwindow *)" (?ImGui_ImplGlfw_InstallCallbacks@@YAXPEAUGLFWwindow@@@Z) 中引用了该符号
+imgui_impl_glfw.obj : error LNK2019: 无法解析的外部符号 glfwGetInputMode，函数 "void __cdecl ImGui_ImplGlfw_UpdateMouseCursor(void)" (?ImGui_ImplGlfw_UpdateMouseCursor@@YAXXZ) 中引用了该符号
+imgui_impl_glfw.obj : error LNK2019: 无法解析的外部符号 glfwSetInputMode，函数 "void __cdecl ImGui_ImplGlfw_UpdateMouseCursor(void)" (?ImGui_ImplGlfw_UpdateMouseCursor@@YAXXZ) 中引用了该符号
+imgui_impl_glfw.obj : error LNK2019: 无法解析的外部符号 glfwGetKeyName，函数 "int __cdecl ImGui_ImplGlfw_TranslateUntranslatedKey(int,int)" (?ImGui_ImplGlfw_TranslateUntranslatedKey@@YAHHH@Z) 中引用了该符号
+imgui_impl_glfw.obj : error LNK2019: 无法解析的外部符号 glfwGetCursorPos，函数 "void __cdecl ImGui_ImplGlfw_UpdateMouseData(void)" (?ImGui_ImplGlfw_UpdateMouseData@@YAXXZ) 中引用了该符号
+imgui_impl_glfw.obj : error LNK2019: 无法解析的外部符号 glfwSetCursorPos，函数 "void __cdecl ImGui_ImplGlfw_UpdateMouseData(void)" (?ImGui_ImplGlfw_UpdateMouseData@@YAXXZ) 中引用了该符号
+imgui_impl_glfw.obj : error LNK2019: 无法解析的外部符号 glfwCreateStandardCursor，函数 "bool __cdecl ImGui_ImplGlfw_Init(struct GLFWwindow *,bool,enum GlfwClientApi)" (?ImGui_ImplGlfw_Init@@YA_NPEAUGLFWwindow@@_NW4GlfwClientApi@@@Z) 中引用了该符号
+imgui_impl_glfw.obj : error LNK2019: 无法解析的外部符号 glfwDestroyCursor，函数 "void __cdecl ImGui_ImplGlfw_Shutdown(void)" (?ImGui_ImplGlfw_Shutdown@@YAXXZ) 中引用了该符号
+imgui_impl_glfw.obj : error LNK2019: 无法解析的外部符号 glfwSetCursor，函数 "void __cdecl ImGui_ImplGlfw_UpdateMouseCursor(void)" (?ImGui_ImplGlfw_UpdateMouseCursor@@YAXXZ) 中引用了该符号
+imgui_impl_glfw.obj : error LNK2019: 无法解析的外部符号 glfwSetCharCallback，函数 "void __cdecl ImGui_ImplGlfw_InstallCallbacks(struct GLFWwindow *)" (?ImGui_ImplGlfw_InstallCallbacks@@YAXPEAUGLFWwindow@@@Z) 中引用了该符号
+imgui_impl_glfw.obj : error LNK2019: 无法解析的外部符号 glfwSetMouseButtonCallback，函数 "void __cdecl ImGui_ImplGlfw_InstallCallbacks(struct GLFWwindow *)" (?ImGui_ImplGlfw_InstallCallbacks@@YAXPEAUGLFWwindow@@@Z) 中引用了该符号
+imgui_impl_glfw.obj : error LNK2019: 无法解析的外部符号 glfwSetCursorEnterCallback，函数 "void __cdecl ImGui_ImplGlfw_InstallCallbacks(struct GLFWwindow *)" (?ImGui_ImplGlfw_InstallCallbacks@@YAXPEAUGLFWwindow@@@Z) 中引用了该符号
+imgui_impl_glfw.obj : error LNK2019: 无法解析的外部符号 glfwGetGamepadState，函数 "void __cdecl ImGui_ImplGlfw_UpdateGamepads(void)" (?ImGui_ImplGlfw_UpdateGamepads@@YAXXZ) 中引用了该符号
+imgui_impl_glfw.obj : error LNK2019: 无法解析的外部符号 glfwSetClipboardString，函数 "void __cdecl ImGui_ImplGlfw_SetClipboardText(void *,char const *)" (?ImGui_ImplGlfw_SetClipboardText@@YAXPEAXPEBD@Z) 中引用了该符号
+imgui_impl_glfw.obj : error LNK2019: 无法解析的外部符号 glfwGetClipboardString，函数 "char const * __cdecl ImGui_ImplGlfw_GetClipboardText(void *)" (?ImGui_ImplGlfw_GetClipboardText@@YAPEBDPEAX@Z) 中引用了该符号
+imgui_impl_glfw.obj : error LNK2019: 无法解析的外部符号 glfwGetWin32Window，函数 "bool __cdecl ImGui_ImplGlfw_Init(struct GLFWwindow *,bool,enum GlfwClientApi)" (?ImGui_ImplGlfw_Init@@YA_NPEAUGLFWwindow@@_NW4GlfwClientApi@@@Z) 中引用了该符号
+VertexArray.obj : error LNK2001: 无法解析的外部符号 __glewEnableVertexAttribArray
+VertexArray.obj : error LNK2001: 无法解析的外部符号 __glewVertexAttribPointer
+VertexArray.obj : error LNK2001: 无法解析的外部符号 __glewBindVertexArray
+VertexArray.obj : error LNK2001: 无法解析的外部符号 __glewDeleteVertexArrays
+VertexArray.obj : error LNK2001: 无法解析的外部符号 __glewGenVertexArrays
+C:\dev\OpenGL\helloOpenGL\helloOpenGL\Dependencies\SOIL2\lib\soil2-debug.lib : warning LNK4272: 库计算机类型“x86”与目标计算机类型“x64”冲突
+C:\dev\OpenGL\helloOpenGL\helloOpenGL\Dependencies\GLEW\lib\Release\Win32\glew32s.lib : warning LNK4272: 库计算机类型“x86”与目标计算机类型“x64”冲突
+C:\dev\OpenGL\helloOpenGL\helloOpenGL\Dependencies\GLFW\lib-vc2022\\glfw3.lib : warning LNK4272: 库计算机类型“x86”与目标计算机类型“x64”冲突
+Dependencies\GLEW\lib\Release\Win32\glew32.lib : warning LNK4272: 库计算机类型“x86”与目标计算机类型“x64”冲突
+.\Debug\helloOpenGL.exe : fatal error LNK1120: 67 个无法解析的外部命令

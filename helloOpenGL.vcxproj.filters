@@ -30,9 +30,6 @@
     <ClCompile Include="src\vender\stb_image\stb_image.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\Texture.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="Dependencies\GLM\detail\glm.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -508,6 +505,7 @@
     <None Include="Dependencies\Assimp\include\assimp\vector3.inl">
       <Filter>头文件</Filter>
     </None>
+    <None Include="res\objects\backpack\backpack.mtl" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\VertexBuffer.h">
@@ -517,9 +515,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="src\VertexArray.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Texture.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Dependencies\GLEW\include\GL\eglew.h">
@@ -1722,5 +1717,23 @@
     <Image Include="src\assest\img\jb.jpg">
       <Filter>资源文件</Filter>
     </Image>
+    <Image Include="res\objects\backpack\specular.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\objects\backpack\roughness.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\objects\backpack\normal.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\objects\backpack\diffuse.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\objects\backpack\ao.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="res\objects\backpack\source_attribution.txt" />
   </ItemGroup>
 </Project>

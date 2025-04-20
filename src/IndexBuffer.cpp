@@ -1,5 +1,8 @@
 #include "IndexBuffer.h"
-
+IndexBuffer::IndexBuffer()
+{
+    
+}
 IndexBuffer::IndexBuffer(const void* indices, unsigned int size)
 {
     glGenBuffers(1, &id);

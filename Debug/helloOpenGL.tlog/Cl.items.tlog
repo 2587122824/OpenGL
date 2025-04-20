@@ -3,7 +3,6 @@ C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\Application.cpp;C:\dev\OpenGL\helloOpe
 C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\camera.cpp;C:\dev\OpenGL\helloOpenGL\helloOpenGL\Debug\camera.obj
 C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\IndexBuffer.cpp;C:\dev\OpenGL\helloOpenGL\helloOpenGL\Debug\IndexBuffer.obj
 C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\shader.cpp;C:\dev\OpenGL\helloOpenGL\helloOpenGL\Debug\shader.obj
-C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\Texture.cpp;C:\dev\OpenGL\helloOpenGL\helloOpenGL\Debug\Texture.obj
 C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\vender\imgui\imgui.cpp;C:\dev\OpenGL\helloOpenGL\helloOpenGL\Debug\imgui.obj
 C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\vender\imgui\imgui_demo.cpp;C:\dev\OpenGL\helloOpenGL\helloOpenGL\Debug\imgui_demo.obj
 C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\vender\imgui\imgui_draw.cpp;C:\dev\OpenGL\helloOpenGL\helloOpenGL\Debug\imgui_draw.obj

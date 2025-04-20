@@ -6,7 +6,6 @@
 #include "VertexBufferLayout.h"
 #include "IndexBuffer.h"
 #include "VertexArray.h"
-#include "Texture.h"
 #include "Shader.h"
 #include "Camera.h"
 #include <GLM/glm.hpp>
@@ -96,12 +95,10 @@ int main() {
     glfwSetCursorPosCallback(window, mouse_callback);
     glfwSetScrollCallback(window, scroll_callback);
  
-    
+    Model backpack("res/objects/backpack/7877.obj");
    
 
-    //纹理对象
-    Texture texture1("src/assest/img/wall.jpg", 0);
-    Texture texture2("src/assest/img/jb.jpg",1);
+
 
     //着色器
     Shader shader("res/shaders/basic.shader");
@@ -237,9 +234,6 @@ int main() {
         //函数检查有没有触发什么事件（比如键盘输入、鼠标移动等），然后调用对应的回调函数（可以通过回调方法手动设置）
         glfwPollEvents();
         //渲染命令
-        GLfloat timeValue = glfwGetTime();//获取时间
-        GLfloat greenValue = (sin(timeValue));//0到1之间变化
-        //shader.setUniform4f("u_color", glm::vec4(1.0f, greenValue, 0.2f, 1.0f));
         shader.use();
          //随时间旋转
         model = glm::rotate(model, ((float)deltaTime * 1) * glm::radians(50.0f), glm::vec3(0.5f, 1.0f, 1.0f));
@@ -248,12 +242,8 @@ int main() {
         shader.setUniformMatrix4fv("view", view);
         projection = glm::perspective(glm::radians(camera1.Zoom), 800.0f / 600.0f, 0.1f, 100.0f);
         shader.setUniformMatrix4fv("projection", projection);
-        glDrawArrays(GL_TRIANGLES, 0, 36);
-        lightShader.use();
-        lightShader.setUniformMatrix4fv("view", view);
-        lightShader.setUniformMatrix4fv("projection", projection);
-        glDrawArrays(GL_TRIANGLES, 0, 12);
-        //glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
+ 
+        
         //交换缓冲
         glfwSwapBuffers(window);
         float currentFrame = glfwGetTime();
