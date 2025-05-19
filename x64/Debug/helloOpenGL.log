@@ -1,4 +1,5 @@
-﻿Application.obj : error LNK2019: 无法解析的外部符号 glewInit，函数 "struct GLFWwindow * __cdecl createWindow(void)" (?createWindow@@YAPEAUGLFWwindow@@XZ) 中引用了该符号
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: Output 目录未以斜杠结尾。  此生成实例将添加斜杠，因为必须有这个斜杠才能正确计算 Output 目录。
+Application.obj : error LNK2019: 无法解析的外部符号 glewInit，函数 "struct GLFWwindow * __cdecl createWindow(void)" (?createWindow@@YAPEAUGLFWwindow@@XZ) 中引用了该符号
 Application.obj : error LNK2019: 无法解析的外部符号 glfwInit，函数 "struct GLFWwindow * __cdecl createWindow(void)" (?createWindow@@YAPEAUGLFWwindow@@XZ) 中引用了该符号
 Application.obj : error LNK2019: 无法解析的外部符号 glfwTerminate，函数 "struct GLFWwindow * __cdecl createWindow(void)" (?createWindow@@YAPEAUGLFWwindow@@XZ) 中引用了该符号
 Application.obj : error LNK2019: 无法解析的外部符号 glfwWindowHint，函数 "struct GLFWwindow * __cdecl createWindow(void)" (?createWindow@@YAPEAUGLFWwindow@@XZ) 中引用了该符号
@@ -20,17 +21,8 @@ Application.obj : error LNK2019: 无法解析的外部符号 glfwGetTime，函�
 imgui_impl_glfw.obj : error LNK2001: 无法解析的外部符号 glfwGetTime
 Application.obj : error LNK2019: 无法解析的外部符号 glfwMakeContextCurrent，函数 "struct GLFWwindow * __cdecl createWindow(void)" (?createWindow@@YAPEAUGLFWwindow@@XZ) 中引用了该符号
 Application.obj : error LNK2019: 无法解析的外部符号 glfwSwapBuffers，函数 main 中引用了该符号
-Application.obj : error LNK2019: 无法解析的外部符号 "public: __cdecl Assimp::Importer::Importer(void)" (??0Importer@Assimp@@QEAA@XZ)，函数 "private: void __cdecl Model::loadModel(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?loadModel@Model@@AEAAXAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) 中引用了该符号
-Application.obj : error LNK2019: 无法解析的外部符号 "public: __cdecl Assimp::Importer::~Importer(void)" (??1Importer@Assimp@@QEAA@XZ)，函数 "private: void __cdecl Model::loadModel(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?loadModel@Model@@AEAAXAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) 中引用了该符号
-Application.obj : error LNK2019: 无法解析的外部符号 "public: struct aiScene const * __cdecl Assimp::Importer::ReadFile(char const *,unsigned int)" (?ReadFile@Importer@Assimp@@QEAAPEBUaiScene@@PEBDI@Z)，函数 "public: struct aiScene const * __cdecl Assimp::Importer::ReadFile(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,unsigned int)" (?ReadFile@Importer@Assimp@@QEAAPEBUaiScene@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@I@Z) 中引用了该符号
-Application.obj : error LNK2019: 无法解析的外部符号 "public: char const * __cdecl Assimp::Importer::GetErrorString(void)const " (?GetErrorString@Importer@Assimp@@QEBAPEBDXZ)，函数 "private: void __cdecl Model::loadModel(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?loadModel@Model@@AEAAXAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) 中引用了该符号
-Application.obj : error LNK2019: 无法解析的外部符号 aiGetMaterialTextureCount，函数 "public: unsigned int __cdecl aiMaterial::GetTextureCount(enum aiTextureType)const " (?GetTextureCount@aiMaterial@@QEBAIW4aiTextureType@@@Z) 中引用了该符号
-Application.obj : error LNK2019: 无法解析的外部符号 aiGetMaterialTexture，函数 "public: enum aiReturn __cdecl aiMaterial::GetTexture(enum aiTextureType,unsigned int,struct aiString *,enum aiTextureMapping *,unsigned int *,float *,enum aiTextureOp *,enum aiTextureMapMode *)const " (?GetTexture@aiMaterial@@QEBA?AW4aiReturn@@W4aiTextureType@@IPEAUaiString@@PEAW4aiTextureMapping@@PEAIPEAMPEAW4aiTextureOp@@PEAW4aiTextureMapMode@@@Z) 中引用了该符号
-Application.obj : error LNK2001: 无法解析的外部符号 __glewActiveTexture
-Application.obj : error LNK2001: 无法解析的外部符号 __glewGetUniformLocation
-shader.obj : error LNK2001: 无法解析的外部符号 __glewGetUniformLocation
-Application.obj : error LNK2001: 无法解析的外部符号 __glewUniform1i
-shader.obj : error LNK2001: 无法解析的外部符号 __glewUniform1i
+Application.obj : error LNK2019: 无法解析的外部符号 "public: __cdecl VertexBuffer::VertexBuffer(void)" (??0VertexBuffer@@QEAA@XZ)，函数 "public: __cdecl Mesh::Mesh(class std::vector<struct Vertex,class std::allocator<struct Vertex> >,class std::vector<unsigned int,class std::allocator<unsigned int> >,class std::vector<struct Texture,class std::allocator<struct Texture> >)" (??0Mesh@@QEAA@V?$vector@UVertex@@V?$allocator@UVertex@@@std@@@std@@V?$vector@IV?$allocator@I@std@@@2@V?$vector@UTexture@@V?$allocator@UTexture@@@std@@@2@@Z) 中引用了该符号
+Application.obj : error LNK2019: 无法解析的外部符号 "public: __cdecl IndexBuffer::IndexBuffer(void)" (??0IndexBuffer@@QEAA@XZ)，函数 "public: __cdecl Mesh::Mesh(class std::vector<struct Vertex,class std::allocator<struct Vertex> >,class std::vector<unsigned int,class std::allocator<unsigned int> >,class std::vector<struct Texture,class std::allocator<struct Texture> >)" (??0Mesh@@QEAA@V?$vector@UVertex@@V?$allocator@UVertex@@@std@@@std@@V?$vector@IV?$allocator@I@std@@@2@V?$vector@UTexture@@V?$allocator@UTexture@@@std@@@2@@Z) 中引用了该符号
 Application.obj : error LNK2001: 无法解析的外部符号 __glewGenerateMipmap
 Application.obj : error LNK2001: 无法解析的外部符号 glewExperimental
 IndexBuffer.obj : error LNK2001: 无法解析的外部符号 __glewBindBuffer
@@ -51,8 +43,10 @@ shader.obj : error LNK2001: 无法解析的外部符号 __glewGetProgramInfoLog
 shader.obj : error LNK2001: 无法解析的外部符号 __glewGetProgramiv
 shader.obj : error LNK2001: 无法解析的外部符号 __glewGetShaderInfoLog
 shader.obj : error LNK2001: 无法解析的外部符号 __glewGetShaderiv
+shader.obj : error LNK2001: 无法解析的外部符号 __glewGetUniformLocation
 shader.obj : error LNK2001: 无法解析的外部符号 __glewLinkProgram
 shader.obj : error LNK2001: 无法解析的外部符号 __glewShaderSource
+shader.obj : error LNK2001: 无法解析的外部符号 __glewUniform1i
 shader.obj : error LNK2001: 无法解析的外部符号 __glewUniform4f
 shader.obj : error LNK2001: 无法解析的外部符号 __glewUniformMatrix4fv
 shader.obj : error LNK2001: 无法解析的外部符号 __glewUseProgram
@@ -85,6 +79,5 @@ VertexArray.obj : error LNK2001: 无法解析的外部符号 __glewGenVertexArra
 C:\dev\OpenGL\helloOpenGL\helloOpenGL\Dependencies\SOIL2\lib\soil2-debug.lib : warning LNK4272: 库计算机类型“x86”与目标计算机类型“x64”冲突
 C:\dev\OpenGL\helloOpenGL\helloOpenGL\Dependencies\GLEW\lib\Release\Win32\glew32s.lib : warning LNK4272: 库计算机类型“x86”与目标计算机类型“x64”冲突
 C:\dev\OpenGL\helloOpenGL\helloOpenGL\Dependencies\GLFW\lib-vc2022\\glfw3.lib : warning LNK4272: 库计算机类型“x86”与目标计算机类型“x64”冲突
-C:\dev\OpenGL\helloOpenGL\helloOpenGL\Dependencies\Assimp\lib\assimp-vc143-mtd.lib : warning LNK4272: 库计算机类型“x86”与目标计算机类型“x64”冲突
 Dependencies\GLEW\lib\Release\Win32\glew32.lib : warning LNK4272: 库计算机类型“x86”与目标计算机类型“x64”冲突
-.\Debug\helloOpenGL.exe : fatal error LNK1120: 72 个无法解析的外部命令
+.\Debug\helloOpenGL.exe : fatal error LNK1120: 67 个无法解析的外部命令

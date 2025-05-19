@@ -17,10 +17,10 @@ void VertexArray::addBuffer(VertexBuffer &VBO, VertexBufferLayout &VBL) {//±ØÐëÒ
 	this->bind();
 	VBO.bind();
 	for (int i = 0; i < VBL.vector.size(); i++) {
-		/*std::cout << VBL.vector[i].position << std::endl;
+		std::cout << VBL.vector[i].position << std::endl;
 		std::cout << VBL.vector[i].dimension << std::endl;
 		std::cout << VBL.vector[i].stride << std::endl;
-		std::cout << VBL.vector[i].offset << std::endl;*/
+		std::cout << VBL.vector[i].offset << std::endl;
 
 	//	//VBO²¼¾Ö ´¢´æÔÚVAOÖÐ
 	//	//µÚÒ»¸ö²ÎÊýÖ¸¶¨ÎÒÃÇÒªÅäÖÃµÄ¶¥µãÊôÐÔ¡£»¹¼ÇµÃÎÒÃÇÔÚ¶¥µã×ÅÉ«Æ÷ÖÐÊ¹ÓÃlayout(location = 0)¶¨ÒåÁËposition¶¥µãÊôÐÔµÄÎ»ÖÃÖµ(Location)Âð£¿Ëü¿ÉÒÔ°Ñ¶¥µãÊôÐÔµÄÎ»ÖÃÖµÉèÖÃÎª0¡£
