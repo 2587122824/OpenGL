@@ -1,15 +1,12 @@
 ﻿  Application.cpp
-C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\Application.cpp(67,17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
 C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\Application.cpp(68,17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\Application.cpp(69,17): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
 C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\Application.cpp(73,19): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
 C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\Application.cpp(74,19): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
 C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\Application.cpp(77,13): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
 C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\Application.cpp(78,13): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
 C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\Application.cpp(85,32): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
 C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\Application.cpp(91,28): warning C4305: “初始化”: 从“double”到“float”截断
-C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\Application.cpp(249,28): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
-  IndexBuffer.cpp
-  VertexBuffer.cpp
-  正在生成代码...
+C:\dev\OpenGL\helloOpenGL\helloOpenGL\src\Application.cpp(235,28): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
 glew32s.lib(glew.obj) : warning LNK4099: 未找到 PDB“”(使用“glew32s.lib(glew.obj)”或在“”中寻找)；正在链接对象，如同没有调试信息一样
   helloOpenGL.vcxproj -> C:\dev\OpenGL\helloOpenGL\helloOpenGL\Debug\helloOpenGL.exe

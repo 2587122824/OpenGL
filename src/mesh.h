@@ -26,10 +26,10 @@ struct Vertex {
     glm::vec3 Tangent;
     // bitangent
     glm::vec3 Bitangent;
-    //bone indexes which will influence this vertex
-    int m_BoneIDs[MAX_BONE_INFLUENCE];
-    //weights from each bone
-    float m_Weights[MAX_BONE_INFLUENCE];
+    ////bone indexes which will influence this vertex
+    //int m_BoneIDs[MAX_BONE_INFLUENCE];
+    ////weights from each bone
+    //float m_Weights[MAX_BONE_INFLUENCE];
 };
 
 struct Texture {
@@ -116,8 +116,8 @@ private:
         VBL.addAttribute(2);//纹理坐标
         VBL.addAttribute(3);//顶点切线
         VBL.addAttribute(3);//顶点副切线
-        VBL.addAttribute(4);//顶点骨骼id
-        VBL.addAttribute(4);//权重
+        //VBL.addAttribute(4);//顶点骨骼id
+        //VBL.addAttribute(4);//权重
         //将顶点属性指针放入VAO
         VAO.addBuffer(VBO, VBL);
     }

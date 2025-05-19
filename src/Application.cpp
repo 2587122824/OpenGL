@@ -16,6 +16,7 @@
 #include "vender/imgui/imgui_impl_opengl3.h"
 #include "vender/imgui/imgui_impl_opengl3.h"
 #include "model.h"
+
 //灯光默认位置
 glm::vec3 lightPos(-1.0f, 0.9f, -0.5f);
 //摄像机对象
@@ -67,12 +68,11 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos) {
         lastX = xpos;
         lastY = ypos;
         firstMouse = false;
-        std::cout << 123 << "," << 456 << std::endl;
         return;
     }
     float xoffset = xpos - lastX;
     float yoffset = lastY - ypos; // 注意这里是相反的，因为y坐标是从底部往顶部依次增大的
-    std::cout << xoffset << "," << yoffset << std::endl;
+    //std::cout << xoffset << "," << yoffset << std::endl;
 
     lastX = xpos;
     lastY = ypos;
@@ -94,12 +94,7 @@ int main() {
     glfwSetKeyCallback(window, key_callback);
     glfwSetCursorPosCallback(window, mouse_callback);
     glfwSetScrollCallback(window, scroll_callback);
- 
-    Model backpack("res/objects/backpack/7877.obj");
-   
-
-
-
+    
     //着色器
     Shader shader("res/shaders/basic.shader");
     shader.use();
@@ -113,6 +108,10 @@ int main() {
     lightShader.setUniform1i("slot1", 0);
     lightShader.setUniform1i("slot2", 1);
     
+
+    //加载模型
+    Model backpack("res/objects/backpack/backpack.obj");
+
     //设置线框模式
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
     //硬件支持最大顶点属性数量
@@ -140,35 +139,12 @@ int main() {
     projection = glm::perspective<float>(glm::radians(45.0f), 800 / 600, 0.1f, 100.0f);
     shader.setUniformMatrix4fv("projection", projection);
 
-    //灯光
-    lightShader.use();
-    //模型矩阵
-    glm::mat4 model2 = glm::mat4(1.0f);//初始化赋值为单位矩阵！
-    model2 = glm::translate(model2, lightPos);
-    model2 = glm::scale(model2, glm::vec3(0.5f));
-    lightShader.setUniformMatrix4fv("model", model2);
-    //视图矩阵
-    lightShader.setUniformMatrix4fv("view", view);
-    //投影矩阵
-    lightShader.setUniformMatrix4fv("projection", projection);
- 
     //开启深度测试
     glEnable(GL_DEPTH_TEST);
 
     //隐藏鼠标光标
     //glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
-    glm::vec3 cubePositions[] = {
-        glm::vec3(0.0f,  0.0f,  0.0f),
-        glm::vec3(2.0f,  5.0f, -15.0f),
-        glm::vec3(-1.5f, -2.2f, -2.5f),
-        glm::vec3(-3.8f, -6.0f, -1.3f),
-        glm::vec3(2.4f, 2.4f, -2.0f),
-        glm::vec3(-1.7f,  3.0f, -7.5f),
-        glm::vec3(1.3f, -2.0f, -2.5f),
-        glm::vec3(1.5f,  2.0f, -2.5f),
-        glm::vec3(1.5f,  0.2f, -1.5f),
-        glm::vec3(-1.3f,  1.0f, -1.5f)
-    };
+   
     //imgUI
     // Setup Dear ImGui context
     IMGUI_CHECKVERSION();
@@ -191,6 +167,11 @@ int main() {
     bool show_another_window = false;
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
+    //渲染循环前检查错误
+    if (glGetError() != GL_NO_ERROR) {
+        std::cerr << "OpenGL 初始化错误" << std::endl;
+        return 0;
+    }
     //GAME LOOP
     while (!glfwWindowShouldClose(window))
     {
@@ -230,6 +211,7 @@ int main() {
         glfwGetFramebufferSize(window, &display_w, &display_h);
         glViewport(0, 0, display_w, display_h);
         //ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+        
 
         //函数检查有没有触发什么事件（比如键盘输入、鼠标移动等），然后调用对应的回调函数（可以通过回调方法手动设置）
         glfwPollEvents();
@@ -242,8 +224,12 @@ int main() {
         shader.setUniformMatrix4fv("view", view);
         projection = glm::perspective(glm::radians(camera1.Zoom), 800.0f / 600.0f, 0.1f, 100.0f);
         shader.setUniformMatrix4fv("projection", projection);
- 
-        
+        glm::mat4 model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.0f)); // translate it down so it's at the center of the scene
+        model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));	// it's a bit too big for our scene, so scale it down
+        shader.setUniformMatrix4fv("model", model);
+        backpack.Draw(shader);
+        std::cout << glGetError() << "错误代码" << std::endl;
         //交换缓冲
         glfwSwapBuffers(window);
         float currentFrame = glfwGetTime();
